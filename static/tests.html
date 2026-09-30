@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#fff8ef">
+	<title>Clube do Focinho — carinho em cada patinha</title>
+	<style>
+		:root {
+			color-scheme: light;
+			--ink: #29251f;
+			--muted: #746d64;
+			--cream: #fff8ef;
+			--orange: #f08b4b;
+			--deep-orange: #d96732;
+			--green: #728b64;
+			--card: #fffdf9;
+		}
+		* { box-sizing: border-box; }
+		body {
+			margin: 0;
+			background: var(--cream);
+			color: var(--ink);
+			font-family: "Segoe UI", Arial, sans-serif;
+			line-height: 1.6;
+		}
+		a { color: inherit; text-decoration: none; }
+		.wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+		header { padding: 22px 0; }
+		.nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+		.brand { display: flex; align-items: center; gap: 10px; font-size: 1.15rem; font-weight: 800; }
+		.brand-mark { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 14px; background: #ffe0c5; font-size: 24px; }
+		.links { display: flex; gap: 28px; color: var(--muted); font-size: .94rem; }
+		.links a:hover { color: var(--deep-orange); }
+		.button { display: inline-block; padding: 12px 20px; border-radius: 999px; background: var(--ink); color: white; font-weight: 700; }
+		.hero { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 48px; padding: 54px 0 76px; }
+		.eyebrow { color: var(--deep-orange); font-size: .8rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+		h1 { max-width: 600px; margin: 14px 0 18px; font-size: clamp(2.7rem, 6vw, 4.8rem); line-height: 1.04; letter-spacing: -.055em; }
+		h1 span { color: var(--deep-orange); }
+		.intro { max-width: 490px; color: var(--muted); font-size: 1.12rem; }
+		.hero-actions { display: flex; align-items: center; gap: 18px; margin-top: 28px; }
+		.button.orange { background: var(--orange); }
+		.text-link { font-weight: 700; }
+		.photo { position: relative; min-height: 420px; display: grid; place-items: center; border-radius: 48% 48% 28px 28px; background: #f5d1a9; overflow: hidden; }
+		.photo img { width: 100%; height: 100%; min-height: 420px; object-fit: cover; display: block; }
+		.photo-note { position: absolute; bottom: 22px; left: 22px; padding: 12px 16px; border-radius: 16px; background: #fffdf9; box-shadow: 0 8px 28px #39291c20; font-weight: 700; }
+		section { padding: 58px 0; }
+		.section-heading { margin-bottom: 28px; text-align: center; }
+		h2 { margin: 8px 0; font-size: clamp(1.9rem, 4vw, 2.7rem); letter-spacing: -.04em; }
+		.section-heading p { margin: 0; color: var(--muted); }
+		.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+		.card { padding: 26px; border: 1px solid #f0e7db; border-radius: 22px; background: var(--card); }
+		.icon { display: grid; width: 50px; height: 50px; place-items: center; border-radius: 16px; background: #fff0df; font-size: 25px; }
+		.card h3 { margin: 16px 0 7px; }
+		.card p { margin: 0; color: var(--muted); }
+		.adopt { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 34px 40px; border-radius: 26px; background: #e8eddf; }
+		.adopt h2 { margin: 0 0 6px; font-size: 2rem; }
+		.adopt p { margin: 0; color: #59634f; }
+		footer { padding: 28px 0; color: var(--muted); font-size: .9rem; }
+		.footer-inner { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid #eadfd2; padding-top: 22px; }
+		@media (max-width: 760px) {
+			.links { display: none; }
+			.hero { grid-template-columns: 1fr; gap: 30px; padding-top: 30px; }
+			.photo, .photo img { min-height: 330px; }
+			.cards { grid-template-columns: 1fr; }
+			.adopt { align-items: flex-start; flex-direction: column; padding: 28px; }
+			.footer-inner { flex-direction: column; }
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="wrap nav">
+			<a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">🐾</span> Clube do Focinho</a>
+			<nav class="links" aria-label="Navegação principal">
+				<a href="#sobre">Nossa missão</a>
+				<a href="#cuidados">Cuidados</a>
+				<a href="#adocao">Adoção</a>
+			</nav>
+			<a class="button" href="#adocao">Quero ajudar</a>
+		</div>
+	</header>
+
+	<main>
+		<div class="wrap hero" id="inicio">
+			<div>
+				<div class="eyebrow">Amor que não cabe no pote</div>
+				<h1>Mais carinho.<br><span>Mais rabinhos</span> felizes.</h1>
+				<p class="intro">Um espaço para quem acredita que todo cachorro merece cuidado, brincadeira e uma família para chamar de sua.</p>
+				<div class="hero-actions">
+					<a class="button orange" href="#adocao">Conheça a adoção</a>
+					<a class="text-link" href="#sobre">Nossa história ↓</a>
+				</div>
+			</div>
+			<div class="photo">
+				<img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1000&q=85" alt="Cachorro golden retriever olhando com alegria para a câmera">
+				<div class="photo-note">🐶 Amizade de verdade</div>
+			</div>
+		</div>
+
+		<section id="sobre">
+			<div class="wrap">
+				<div class="section-heading">
+					<div class="eyebrow">Um focinho de cada vez</div>
+					<h2>Pequenos gestos, grandes alegrias</h2>
+					<p>Informação e cuidado para deixar a vida dos nossos melhores amigos ainda melhor.</p>
+				</div>
+				<div class="cards" id="cuidados">
+					<article class="card"><div class="icon" aria-hidden="true">🥣</div><h3>Nutrição com carinho</h3><p>Água fresca, alimentação adequada e uma rotina equilibrada fazem toda a diferença.</p></article>
+					<article class="card"><div class="icon" aria-hidden="true">🦴</div><h3>Brincar faz bem</h3><p>Passeios e brincadeiras estimulam o corpo, a mente e fortalecem a amizade.</p></article>
+					<article class="card"><div class="icon" aria-hidden="true">🩺</div><h3>Saúde em primeiro lugar</h3><p>Visitas regulares ao veterinário ajudam seu companheiro a viver mais feliz e saudável.</p></article>
+				</div>
+			</div>
+		</section>
+
+		<section id="adocao">
+			<div class="wrap adopt">
+				<div><h2>Um lar muda tudo. ❤️</h2><p>Adotar é abrir espaço no sofá — e no coração — para uma amizade para a vida toda.</p></div>
+				<a class="button" href="mailto:oi@clubedofocinho.com.br">Saiba como adotar</a>
+			</div>
+		</section>
+	</main>
+
+	<footer><div class="wrap footer-inner"><span>© 2025 Clube do Focinho</span><span>Feito com carinho e muitas patinhas 🐾</span></div></footer>
+</body>
+</html>
